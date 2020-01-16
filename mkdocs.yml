@@ -1,1 +1,13 @@
-site_name: My Docs
+site_name: Terrasky-Twilio
+theme:
+    name: 'material'
+    language: 'ja'
+markdown_extensions:
+    - admonition
+pages:
+- 'about.md'
+- 'packageInstall.md'
+- 'twilioSetting.md'
+- 'afterInstallSetting.md'
+- 'processBuilder.md'
+- 'smsLogs.md'
