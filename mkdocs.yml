@@ -5,7 +5,7 @@ theme:
 markdown_extensions:
     - admonition
 pages:
-- 'about.md'
+- 'index.md'
 - 'packageInstall.md'
 - 'twilioSetting.md'
 - 'afterInstallSetting.md'
