@@ -8,7 +8,7 @@
 
 プロセスビルダーを新規作成します。以下を参考に値を入力して下さい。
 
-![新規プロセスビルダー](/img/processBuilder/newProcess.png)
+![新規プロセスビルダー](img/processBuilder/newProcess.png)
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
@@ -21,19 +21,19 @@
 
 プロセスビルダーを起動するオブジェクトと開始タイミングを選択してください。
 
-![オブジェクトの選択](/img/processBuilder/selectObject.png)
+![オブジェクトの選択](img/processBuilder/selectObject.png)
 
 ### 条件を追加
 
 アクションを呼ぶための条件を定義してください。
 
-![条件を追加](/img/processBuilder/actionRule.png)
+![条件を追加](img/processBuilder/actionRule.png)
 
 ### アクションを定義
 
 アクションを呼ぶための条件を定義してください。
 
-![条件を追加](/img/processBuilder/action.png)
+![条件を追加](img/processBuilder/action.png)
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
@@ -50,14 +50,14 @@
 プロセスビルダーの作成が完了したら、最後に右上の有効化ボタン押します。
 確認のポップアップが出ますので、Confirmを押して有効化します。
 
-![プロセスビルダー有効化](/img/processBuilder/active.png)
+![プロセスビルダー有効化](img/processBuilder/active.png)
 
 右上の有効化ボタンが無効化ボタンに変わっていれば完了です。
 
-![プロセスビルダー有効化後](/img/processBuilder/afterActive.png)
+![プロセスビルダー有効化後](img/processBuilder/afterActive.png)
 
 ## プロセスビルダーの起動
 
 先ほど、作成したプロセスビルダーを起動する条件になるようにレコードを更新します。プロセスビルダーで設定した宛先「toPhoneNumber」に対して、メッセージ「messageBody」が送信されます。TwilioのSMS送信キューに登録された段階で、プロセスビルダー作成の際に渡したパラメータ「recordId」に関連づく活動履歴が、SMS送信履歴として1件作成されます。
 
-![プロセスビルダー起動](/img/processBuilder/updateRecord.png)
+![プロセスビルダー起動](img/processBuilder/updateRecord.png)

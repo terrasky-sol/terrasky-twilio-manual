@@ -8,7 +8,7 @@ SMS送信履歴の確認方法について説明します。
 
 SMS送信成功時に、以下のような活動履歴が生成されます。
 
-![SMS送信成功時活動履歴](/img/smsLogs/smsLogSuccess.png)
+![SMS送信成功時活動履歴](img/smsLogs/smsLogSuccess.png)
 
 |  項目  | API参照名 |  内容  |
 | ---- | ---- | ---- |
@@ -24,7 +24,7 @@ SMS送信成功時に、以下のような活動履歴が生成されます。
 
 SMS送信失敗時に、以下のような活動履歴が生成されます。
 
-![SMS送信失敗時活動履歴](/img/smsLogs/smsLogError.png)
+![SMS送信失敗時活動履歴](img/smsLogs/smsLogError.png)
 
 |  項目  | API参照名 |  内容  |
 | ---- | ---- | ---- |
@@ -43,14 +43,14 @@ SMS送信失敗時に、以下のような活動履歴が生成されます。
 
 [Apex ジョブキューの監視](https://help.salesforce.com/articleView?err=1&id=code_apex_job.htm&type=5)
 
-![Apexジョブ](/img/smsLogs/apexJob.png)
+![Apexジョブ](img/smsLogs/apexJob.png)
 
 ## Twilioダッシュボードでの確認
 
 活動履歴のコメントにある、Twilio URL（https://www.twilio.com/console/sms/logs/SM*******）からTwilioダッシュボードで詳細なログを確認できます。
 [SMS送信ログ確認の詳細はこちら](https://jp.twilio.com/docs/sms/debugging-tools#explore-your-message-logs)
 
-![SMS送信ログ](/img/smsLogs/smsLogs.png)
+![SMS送信ログ](img/smsLogs/smsLogs.png)
 
 !!! Tips
     こちらのリンクからもSMS送信のログ一覧が確認できます。[Programmable SMS Logs](https://www.twilio.com/console/sms/logs)

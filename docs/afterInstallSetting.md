@@ -9,15 +9,15 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 カスタム設定の一覧を表示し、TwilioSmsSettingが存在することを確認します。
 新たにレコードを作成するためにManageをクリックします。
 
-![カスタム設定一覧](/img/afterInstall/customSettings.png)
+![カスタム設定一覧](img/afterInstall/customSettings.png)
 
 レコードを作成するため、新規ボタンを押します。
 
-![カスタム設定新規](/img/afterInstall/TwilioSmsSetting.png)
+![カスタム設定新規](img/afterInstall/TwilioSmsSetting.png)
 
 以下の値を入力し、保存します。
 
-![カスタム設定入力](/img/afterInstall/TwilioSmsSettingEdit.png)
+![カスタム設定入力](img/afterInstall/TwilioSmsSettingEdit.png)
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
@@ -42,11 +42,11 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 
 新規作成するため、新規指定ログイン情報ボタンをクリックします。
 
-![指定ログイン情報](/img/afterInstall/NamedCredentials.png)
+![指定ログイン情報](img/afterInstall/NamedCredentials.png)
 
 指定ログイン情報TestTwilioSMSCredentialを作成するため、以下の情報を入力し保存します。
 
-![指定ログイン情報入力](/img/afterInstall/TwilioSMSCredential.png)
+![指定ログイン情報入力](img/afterInstall/TwilioSMSCredential.png)
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
@@ -66,11 +66,11 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 
 新規作成するため、新規指定ログイン情報ボタンをクリックします。
 
-![指定ログイン情報](/img/afterInstall/NamedCredentials.png)
+![指定ログイン情報](img/afterInstall/NamedCredentials.png)
 
 指定ログイン情報TwilioSMSCredentialを作成するため、以下の情報を入力し保存します。
 
-![指定ログイン情報入力](/img/afterInstall/TestTwilioSMSCredential.png)
+![指定ログイン情報入力](img/afterInstall/TestTwilioSMSCredential.png)
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
@@ -90,5 +90,5 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 
 TwilioSMSCredentialと、TestTwilioSMSCredentialが作成されていれば完了です。
 
-![指定ログイン情報作成後](/img/afterInstall/CreatedNamedCredentials.png)
+![指定ログイン情報作成後](img/afterInstall/CreatedNamedCredentials.png)
 
