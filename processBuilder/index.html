@@ -1,0 +1,611 @@
+
+
+
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="クリップボードへコピー">
+      
+        <meta name="lang:clipboard.copied" content="コピーしました">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="何も見つかりませんでした">
+      
+        <meta name="lang:search.result.one" content="1件見つかりました">
+      
+        <meta name="lang:search.result.other" content="#件見つかりました">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-　、。，．]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>プロセスビルダーによるSMS送信 - Terrasky-Twilio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#sms" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Terrasky-Twilio" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Terrasky-Twilio
+            </span>
+            <span class="md-header-nav__topic">
+              
+                プロセスビルダーによるSMS送信
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            検索キーワードを入力してください
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Terrasky-Twilio" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Terrasky-Twilio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="Terrasky-Twilioとは？" class="md-nav__link">
+      Terrasky-Twilioとは？
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../packageInstall/" title="パッケージのインストール" class="md-nav__link">
+      パッケージのインストール
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../twilioSetting/" title="Twilioの設定" class="md-nav__link">
+      Twilioの設定
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../afterInstallSetting/" title="インストール後設定手順" class="md-nav__link">
+      インストール後設定手順
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        プロセスビルダーによるSMS送信
+      </label>
+    
+    <a href="./" title="プロセスビルダーによるSMS送信" class="md-nav__link md-nav__link--active">
+      プロセスビルダーによるSMS送信
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    プロセスビルダーの構築
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    プロセスビルダーの新規作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    オブジェクトの選択
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    条件を追加
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    アクションを定義
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    プロセスビルダーの有効化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    プロセスビルダーの起動
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../smsLogs/" title="SMS送信履歴" class="md-nav__link">
+      SMS送信履歴
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">目次</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    プロセスビルダーの構築
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    プロセスビルダーの新規作成
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    オブジェクトの選択
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    条件を追加
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    アクションを定義
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    プロセスビルダーの有効化
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    プロセスビルダーの起動
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="sms">プロセスビルダーによるSMS送信</h1>
+<p>プロセスビルダーによるSMS送信の実装方法について説明します。</p>
+<h2 id="_1">プロセスビルダーの構築</h2>
+<h3 id="_2">プロセスビルダーの新規作成</h3>
+<p>プロセスビルダーを新規作成します。以下を参考に値を入力して下さい。</p>
+<p><img alt="新規プロセスビルダー" src="/img/processBuilder/newProcess.png" /></p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>必須/任意</th>
+<th>入力内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>プロセス名</td>
+<td>必須</td>
+<td>任意の名前を入力して下さい。</td>
+</tr>
+<tr>
+<td>API参照名</td>
+<td>必須</td>
+<td>任意の名前を入力して下さい。</td>
+</tr>
+<tr>
+<td>説明</td>
+<td>任意</td>
+<td>プロセスビルダーの説明を任意で入力して下さい。</td>
+</tr>
+<tr>
+<td>プロセスを開始するタイミング</td>
+<td>必須</td>
+<td>プロセスビルダーの起動タイミングを選択してください。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">オブジェクトの選択</h3>
+<p>プロセスビルダーを起動するオブジェクトと開始タイミングを選択してください。</p>
+<p><img alt="オブジェクトの選択" src="/img/processBuilder/selectObject.png" /></p>
+<h3 id="_4">条件を追加</h3>
+<p>アクションを呼ぶための条件を定義してください。</p>
+<p><img alt="条件を追加" src="/img/processBuilder/actionRule.png" /></p>
+<h3 id="_5">アクションを定義</h3>
+<p>アクションを呼ぶための条件を定義してください。</p>
+<p><img alt="条件を追加" src="/img/processBuilder/action.png" /></p>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th>必須/任意</th>
+<th>入力内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>アクション種別</td>
+<td>必須</td>
+<td>Apexを選択して下さい。</td>
+</tr>
+<tr>
+<td>アクション名</td>
+<td>必須</td>
+<td>任意の名前を入力して下さい。</td>
+</tr>
+<tr>
+<td>Apex クラス</td>
+<td>必須</td>
+<td>TwilioSendSMSを選択して下さい。</td>
+</tr>
+<tr>
+<td>toPhoneNumber</td>
+<td>必須</td>
+<td>宛先の電話番号を入力して下さい。※現状、E.164 フォーマット（例：+819012345678）のみ対応可能.</td>
+</tr>
+<tr>
+<td>recordId</td>
+<td>必須</td>
+<td>SMS送信の履歴を活動履歴として残したいオブジェクトのIDを入力して下さい。例：画像では商談に紐づく活動履歴を作成するため商談のIDを入力。</td>
+</tr>
+<tr>
+<td>messageBody</td>
+<td>必須</td>
+<td>SMSで送信するメッセージを入力して下さい。</td>
+</tr>
+<tr>
+<td>customSettingName</td>
+<td>必須</td>
+<td>カスタム設定「TwilioSmsSetting」で作成したレコードの「Name」を入力して下さい。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">プロセスビルダーの有効化</h3>
+<p>プロセスビルダーの作成が完了したら、最後に右上の有効化ボタン押します。
+確認のポップアップが出ますので、Confirmを押して有効化します。</p>
+<p><img alt="プロセスビルダー有効化" src="/img/processBuilder/active.png" /></p>
+<p>右上の有効化ボタンが無効化ボタンに変わっていれば完了です。</p>
+<p><img alt="プロセスビルダー有効化後" src="/img/processBuilder/afterActive.png" /></p>
+<h2 id="_7">プロセスビルダーの起動</h2>
+<p>先ほど、作成したプロセスビルダーを起動する条件になるようにレコードを更新します。プロセスビルダーで設定した宛先「toPhoneNumber」に対して、メッセージ「messageBody」が送信されます。TwilioのSMS送信キューに登録された段階で、プロセスビルダー作成の際に渡したパラメータ「recordId」に関連づく活動履歴が、SMS送信履歴として1件作成されます。</p>
+<p><img alt="プロセスビルダー起動" src="/img/processBuilder/updateRecord.png" /></p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../afterInstallSetting/" title="インストール後設定手順" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                インストール後設定手順
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../smsLogs/" title="SMS送信履歴" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                SMS送信履歴
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
