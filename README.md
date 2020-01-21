@@ -17,6 +17,6 @@ View [the MkDocs documentation](https://www.mkdocs.org/).<br>
 cd sample01
 mkdocs build
 mkdocs serve
-デプロイ
+デプロイURL反映
 mkdocs gh-deploy
  
