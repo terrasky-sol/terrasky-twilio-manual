@@ -41,9 +41,13 @@
 |  アクション名  |  必須  |  任意の名前を入力して下さい。  |
 |  Apex クラス  |  必須  |  TwilioSendSMSを選択して下さい。  |
 |  toPhoneNumber |  必須  |  宛先の電話番号を入力して下さい。※現状、E.164 フォーマット（例：+819012345678）のみ対応可能. |
-|  recordId |  必須  |  SMS送信の履歴を活動履歴として残したいオブジェクトのIDを入力して下さい。例：画像では商談に紐づく活動履歴を作成するため商談のIDを入力。  |
 |  messageBody |  必須  |  SMSで送信するメッセージを入力して下さい。  |
 |  customSettingName |  必須  |  カスタム設定「TwilioSmsSetting」で作成したレコードの「Name」を入力して下さい。  |
+|  whatId |  任意  |  SMS送信の履歴を活動履歴として残したいオブジェクト(取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクト)のIDを入力して下さい。  |
+|  whoId |  任意  |  SMS送信の履歴を活動履歴として残したいオブジェクト(リードや取引先責任者など、人を表すオブジェクト)のIDを入力して下さい。  |
+
+whoIdとwhatIdについてはこちらをご参照ください。
+[Task|Salesforce開発者ガイド](https://developer.salesforce.com/docs/atlas.ja-jp.api.meta/api/sforce_api_objects_task.htm)
 
 ### プロセスビルダーの有効化
 
