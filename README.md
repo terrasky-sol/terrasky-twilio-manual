@@ -10,3 +10,5 @@ View [the MkDocs documentation](https://www.mkdocs.org/).<br>
 [MkDocsによるドキュメント作成](https://qiita.com/mebiusbox2/items/a61d42878266af969e3c)<br>
 [MkDocs 使ってみた。](https://www.kimoton.com/entry/2017/07/08/121050)<br>
 [MkDocs：インストールから github pages へのデプロイまで](https://www.kakistamp.com/entry/2019/08/31/154536)
+#コマンド
+  mkdocs gh-deploy
