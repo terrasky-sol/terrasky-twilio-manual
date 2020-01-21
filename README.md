@@ -18,5 +18,5 @@ cd sample01
 mkdocs build
 mkdocs serve
 デプロイ
-mkdocs gh-deploy```
+mkdocs gh-deploy
  
