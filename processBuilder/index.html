@@ -490,11 +490,6 @@
 <td>宛先の電話番号を入力して下さい。※現状、E.164 フォーマット（例：+819012345678）のみ対応可能.</td>
 </tr>
 <tr>
-<td>recordId</td>
-<td>必須</td>
-<td>SMS送信の履歴を活動履歴として残したいオブジェクトのIDを入力して下さい。例：画像では商談に紐づく活動履歴を作成するため商談のIDを入力。</td>
-</tr>
-<tr>
 <td>messageBody</td>
 <td>必須</td>
 <td>SMSで送信するメッセージを入力して下さい。</td>
@@ -504,8 +499,20 @@
 <td>必須</td>
 <td>カスタム設定「TwilioSmsSetting」で作成したレコードの「Name」を入力して下さい。</td>
 </tr>
+<tr>
+<td>whatId</td>
+<td>任意</td>
+<td>SMS送信の履歴を活動履歴として残したいオブジェクト(取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクト)のIDを入力して下さい。</td>
+</tr>
+<tr>
+<td>whoId</td>
+<td>任意</td>
+<td>SMS送信の履歴を活動履歴として残したいオブジェクト(リードや取引先責任者など、人を表すオブジェクト)のIDを入力して下さい。</td>
+</tr>
 </tbody>
 </table>
+<p>whoIdとwhatIdについてはこちらをご参照ください。
+<a href="https://developer.salesforce.com/docs/atlas.ja-jp.api.meta/api/sforce_api_objects_task.htm">Task|Salesforce開発者ガイド</a></p>
 <h3 id="_6">プロセスビルダーの有効化</h3>
 <p>プロセスビルダーの作成が完了したら、最後に右上の有効化ボタン押します。
 確認のポップアップが出ますので、Confirmを押して有効化します。</p>
