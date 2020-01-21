@@ -11,6 +11,11 @@ View [the MkDocs documentation](https://www.mkdocs.org/).<br>
 [MkDocs 使ってみた。](https://www.kimoton.com/entry/2017/07/08/121050)<br>
 [MkDocs：インストールから github pages へのデプロイまで](https://www.kakistamp.com/entry/2019/08/31/154536)
 # コマンド
-  デプロイ
+  ひな形を作成<br>
+  ```mkdocs new sample01
+cd sample01
+mkdocs build
+mkdocs serve```
+  デプロイ<br>
   ```mkdocs gh-deploy```
  
