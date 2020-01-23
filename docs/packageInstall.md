@@ -12,6 +12,7 @@ TerraSky-Twilioのインストール手順を説明します。
 ### インストール先組織へログイン
 
 !!! Warning
+    [パッケージのインストール|SALESFORCE ヘルプ](https://help.salesforce.com/articleView?id=distribution_installing_packages.htm&type=5)<br>
     Sandbox 組織にインストールする場合は、URL の最初の部分を http://test.salesforce.com に置き換える必要があります。またカスタムドメインを使用の場合は、そちらのURLに置き換える必要があります。
 
 ログイン画面が表示されますので、パッケージをインストールしたい組織の情報を入力しログインします。
@@ -19,7 +20,7 @@ TerraSky-Twilioのインストール手順を説明します。
 ![ログイン画面](img/install/login.PNG)
 
 !!! Warning
-    既に組織にログインしている場合は、ログイン画面が表示されずにインストール画面が表示されます。インストールしたい組織が異なる場合は、一度ログアウトしてから[パッケージインストール](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2w000002rdGJ)をクリックしてください。
+    既に組織にログインしている場合は、ログイン画面が表示されずにインストール画面が表示されます。インストールしたい組織が異なる場合は、一度ログアウトしてからもう一度試してください。
 
 ### インストール
 

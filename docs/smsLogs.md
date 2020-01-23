@@ -17,8 +17,8 @@ SMS送信成功時に、以下のような活動履歴が生成されます。
 |  優先度  |  Priority  |  Normal  |
 |  コメント  |  Description  |To: 宛先電話番号 <br> Direction: outbound-api <br> Twilio URL: TwilioダッシュボードSMS送信ログURL <br> Body: 送信メッセージ |
 |  状況  |  Status  |  Normal  |
-|  名前  |  WhoId  |  Contact等の人型オブジェクトの関連先を表示  |
-|  関連先  |  WhatId  | 人型以外の関連先オブジェクトを表示 |
+|  名前  |  WhoId  |  リードや取引先責任者など、人を表すオブジェクトの関連先を表示  |
+|  関連先  |  WhatId  | 取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクトの関連先を表示 |
 
 ### SMS送信失敗時
 
@@ -33,8 +33,8 @@ SMS送信失敗時に、以下のような活動履歴が生成されます。
 |  優先度  |  Priority  |  Normal  |
 |  コメント  |  Description  |statusCode= 200番台以外 <br> requestBody= リクエスト内容 <br> responseBody= エラーメッセージを含むレスポンス内容 |
 |  状況  |  Status  |  Normal  |
-|  名前  |  WhoId  |  Contact等の人型オブジェクトの関連先を表示  |
-|  関連先  |  WhatId  | 人型以外の関連先オブジェクトを表示 |
+|  名前  |  WhoId  |  リードや取引先責任者など、人を表すオブジェクトの関連先を表示  |
+|  関連先  |  WhatId  | 取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクトの関連先を表示 |
 
 ## Apexジョブでの確認
 

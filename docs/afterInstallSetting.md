@@ -21,8 +21,8 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
-|  Name  |  必須  |  特定のSMS送信用とに沿った名前にすることを推奨します。  |
-|  IsTest  |  必須  |  チェックなしの場合、実際にSMSが送信されます。チェックありの場合、Twilioのテスト用クレデンシャルを使用し、実際にSMS送信はされずにログだけが残ります。  |
+|  Name  |  必須  |  名前は任意ですが、特定のSMS送信用途に沿った名前にすることを推奨します。  |
+|  IsTest  |  必須  |  チェックなしの場合、実際にSMSが送信されSalesforceとTwilioにログが残ります。<br>チェックありの場合、Twilioのテスト用クレデンシャルを使用し、実際にSMS送信はされずにSalesforceに活動履歴としてログだけが残ります。その際、Twilioにログは残りません。  |
 |  MessagingServiceSID  |  必須  |  Twilioで作成したSMSのMessagingServiceSIDを入力します。例：MG***************************  |
 |  TwilioDashboardUri  |  必須  | 活動履歴のログで使用するため、次のURLを入力します。 https://www.twilio.com |
 
@@ -31,7 +31,8 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 
 ## 指定ログイン情報
 
-新規に以下の２つの指定ログイン情報を作成します。
+新規に以下の２つの指定ログイン情報を作成します。<br>
+[指定ログイン情報|SALESFORCE ヘルプ](https://help.salesforce.com/articleView?id=named_credentials_about.htm&type=5)
 
 |  指定ログイン情報  | 概要 |
 | ---- | ---- |
@@ -44,16 +45,16 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 
 ![指定ログイン情報](img/afterInstall/NamedCredentials.png)
 
-指定ログイン情報TestTwilioSMSCredentialを作成するため、以下の情報を入力し保存します。
+指定ログイン情報を作成するため、以下の情報を入力し保存します。
 
 ![指定ログイン情報入力](img/afterInstall/TwilioSMSCredential.png)
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
-|  表示ラベル  |  必須  |  TwilioSMSCredential ※固定の名前のため変更しないでください。 |
-|  名前  |  必須  |  TwilioSMSCredential ※固定の名前のため変更しないでください。 |
-|  URL  |  必須  |  https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にLIVE Credentials ACCOUNT SIDを入力してください。例：AC******* |
-|  証明書  |  任意  | 任意で用意して下さい。 |
+|  表示ラベル  |  必須  |  <font color="Red">TwilioSMSCredential ※固定の名前のため変更しないでください。</font> |
+|  名前  |  必須  |  <font color="Red">TwilioSMSCredential ※固定の名前のため変更しないでください。</font> |
+|  URL  |  必須  |  https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にLIVE Credentials ACCOUNT SIDを入力してください。例：AC*******<br> [Twilio SMS API リファレンス](https://www.twilio.com/docs/sms/api#send-messages-with-the-sms-api)  |
+|  証明書  |  任意  | 任意となります。 |
 |  ID 種別  |  任意  | 指定ユーザを選択します。 |
 |  認証プロトコル  |  任意  | パスワード認証を選択します。 |
 |  ユーザ名  |  必須  | 作成したTwilio API KeyのSID　例：SK********** |
@@ -68,16 +69,16 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 
 ![指定ログイン情報](img/afterInstall/NamedCredentials.png)
 
-指定ログイン情報TwilioSMSCredentialを作成するため、以下の情報を入力し保存します。
+指定ログイン情報を作成するため、以下の情報を入力し保存します。
 
 ![指定ログイン情報入力](img/afterInstall/TestTwilioSMSCredential.png)
 
 |  項目  | 必須/任意 |  入力内容  |
 | ---- | ---- | ---- |
-|  表示ラベル  |  必須  |  TestTwilioSMSCredential ※固定の名前のため変更しないでください。 |
-|  名前  |  必須  |  TestTwilioSMSCredential ※固定の名前のため変更しないでください。 |
-|  URL  |  必須  |  https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にTest Credentials TEST ACCOUNT SIDを入力してください。例：AC******* |
-|  証明書  |  任意  | 任意で用意して下さい。 |
+|  表示ラベル  |  必須  |  <font color="Red">TestTwilioSMSCredential ※固定の名前のため変更しないでください。</font> |
+|  名前  |  必須  |  <font color="Red">TestTwilioSMSCredential ※固定の名前のため変更しないでください。</font> |
+|  URL  |  必須  |  https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にTest Credentials TEST ACCOUNT SIDを入力してください。例：AC******* <br> [Twilio SMS API リファレンス](https://www.twilio.com/docs/sms/api#send-messages-with-the-sms-api) |
+|  証明書  |  任意  | 任意となります。 |
 |  ID 種別  |  任意  | 指定ユーザを選択します。 |
 |  認証プロトコル  |  任意  | パスワード認証を選択します。 |
 |  ユーザ名  |  必須  | Test Credentials TEST ACCOUNT SID　例：AC********** |
