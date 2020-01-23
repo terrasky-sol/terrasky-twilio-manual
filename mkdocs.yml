@@ -1,13 +1,14 @@
 site_name: Terrasky-Twilio
 theme:
-    name: 'material'
-    language: 'ja'
+      name: material
+      language: ja
 markdown_extensions:
     - admonition
 nav:
-- 'index.md'
-- 'packageInstall.md'
-- 'twilioSetting.md'
-- 'afterInstallSetting.md'
-- 'processBuilder.md'
-- 'smsLogs.md'
+    - index.md
+    - packageInstall.md
+    - twilioSetting.md
+    - afterInstallSetting.md
+    - processBuilder.md
+    - smsLogs.md
+
