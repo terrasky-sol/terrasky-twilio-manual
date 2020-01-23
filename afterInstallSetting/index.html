@@ -435,12 +435,12 @@
 <tr>
 <td>Name</td>
 <td>必須</td>
-<td>特定のSMS送信用とに沿った名前にすることを推奨します。</td>
+<td>名前は任意ですが、特定のSMS送信用途に沿った名前にすることを推奨します。</td>
 </tr>
 <tr>
 <td>IsTest</td>
 <td>必須</td>
-<td>チェックなしの場合、実際にSMSが送信されます。チェックありの場合、Twilioのテスト用クレデンシャルを使用し、実際にSMS送信はされずにログだけが残ります。</td>
+<td>チェックなしの場合、実際にSMSが送信されSalesforceとTwilioにログが残ります。<br>チェックありの場合、Twilioのテスト用クレデンシャルを使用し、実際にSMS送信はされずにSalesforceに活動履歴としてログだけが残ります。その際、Twilioにログは残りません。</td>
 </tr>
 <tr>
 <td>MessagingServiceSID</td>
@@ -459,7 +459,8 @@
 <p>カスタム設定は用途に合わせて複数作成可能です。MessagingServiceを複数作成し、用途によって送信元を変更する事が出来ます。</p>
 </div>
 <h2 id="_4">指定ログイン情報</h2>
-<p>新規に以下の２つの指定ログイン情報を作成します。</p>
+<p>新規に以下の２つの指定ログイン情報を作成します。<br>
+<a href="https://help.salesforce.com/articleView?id=named_credentials_about.htm&amp;type=5">指定ログイン情報|SALESFORCE ヘルプ</a></p>
 <table>
 <thead>
 <tr>
@@ -481,7 +482,7 @@
 <h3 id="twiliosmscredential">指定ログイン情報TwilioSMSCredentialの作成</h3>
 <p>新規作成するため、新規指定ログイン情報ボタンをクリックします。</p>
 <p><img alt="指定ログイン情報" src="../img/afterInstall/NamedCredentials.png" /></p>
-<p>指定ログイン情報TestTwilioSMSCredentialを作成するため、以下の情報を入力し保存します。</p>
+<p>指定ログイン情報を作成するため、以下の情報を入力し保存します。</p>
 <p><img alt="指定ログイン情報入力" src="../img/afterInstall/TwilioSMSCredential.png" /></p>
 <table>
 <thead>
@@ -495,22 +496,22 @@
 <tr>
 <td>表示ラベル</td>
 <td>必須</td>
-<td>TwilioSMSCredential ※固定の名前のため変更しないでください。</td>
+<td><font color="Red">TwilioSMSCredential ※固定の名前のため変更しないでください。</font></td>
 </tr>
 <tr>
 <td>名前</td>
 <td>必須</td>
-<td>TwilioSMSCredential ※固定の名前のため変更しないでください。</td>
+<td><font color="Red">TwilioSMSCredential ※固定の名前のため変更しないでください。</font></td>
 </tr>
 <tr>
 <td>URL</td>
 <td>必須</td>
-<td>https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にLIVE Credentials ACCOUNT SIDを入力してください。例：AC<strong><em>*</em></strong></td>
+<td>https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にLIVE Credentials ACCOUNT SIDを入力してください。例：AC<strong><em>*</em></strong><br> <a href="https://www.twilio.com/docs/sms/api#send-messages-with-the-sms-api">Twilio SMS API リファレンス</a></td>
 </tr>
 <tr>
 <td>証明書</td>
 <td>任意</td>
-<td>任意で用意して下さい。</td>
+<td>任意となります。</td>
 </tr>
 <tr>
 <td>ID 種別</td>
@@ -552,7 +553,7 @@
 <h3 id="testtwiliosmscredential">指定ログイン情報TestTwilioSMSCredentialの作成</h3>
 <p>新規作成するため、新規指定ログイン情報ボタンをクリックします。</p>
 <p><img alt="指定ログイン情報" src="../img/afterInstall/NamedCredentials.png" /></p>
-<p>指定ログイン情報TwilioSMSCredentialを作成するため、以下の情報を入力し保存します。</p>
+<p>指定ログイン情報を作成するため、以下の情報を入力し保存します。</p>
 <p><img alt="指定ログイン情報入力" src="../img/afterInstall/TestTwilioSMSCredential.png" /></p>
 <table>
 <thead>
@@ -566,22 +567,22 @@
 <tr>
 <td>表示ラベル</td>
 <td>必須</td>
-<td>TestTwilioSMSCredential ※固定の名前のため変更しないでください。</td>
+<td><font color="Red">TestTwilioSMSCredential ※固定の名前のため変更しないでください。</font></td>
 </tr>
 <tr>
 <td>名前</td>
 <td>必須</td>
-<td>TestTwilioSMSCredential ※固定の名前のため変更しないでください。</td>
+<td><font color="Red">TestTwilioSMSCredential ※固定の名前のため変更しないでください。</font></td>
 </tr>
 <tr>
 <td>URL</td>
 <td>必須</td>
-<td>https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にTest Credentials TEST ACCOUNT SIDを入力してください。例：AC<strong><em>*</em></strong></td>
+<td>https://api.twilio.com/2010-04-01/Accounts/[Account SID]/Messages.json ※[Account SID]にTest Credentials TEST ACCOUNT SIDを入力してください。例：AC<strong><em>*</em></strong> <br> <a href="https://www.twilio.com/docs/sms/api#send-messages-with-the-sms-api">Twilio SMS API リファレンス</a></td>
 </tr>
 <tr>
 <td>証明書</td>
 <td>任意</td>
-<td>任意で用意して下さい。</td>
+<td>任意となります。</td>
 </tr>
 <tr>
 <td>ID 種別</td>
