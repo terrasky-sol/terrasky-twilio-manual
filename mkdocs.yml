@@ -1,6 +1,6 @@
 site_name: Terrasky-Twilio
 theme:
-      name: material
+      name: readthedocs
       language: ja
 markdown_extensions:
     - admonition
