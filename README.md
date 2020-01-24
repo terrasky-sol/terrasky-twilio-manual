@@ -2,6 +2,9 @@
 TerraSky-Twilioのマニュアルです。
 MkDocsを使用して作成しています。<br>
 [マニュアル](https://terrasky-sol.github.io/terrasky-twilio-manual/)
+# マニュアルバージョン一覧
+Read the Docsを使用してバージョン管理をしています。<br>
+[マニュアルバージョン一覧](https://readthedocs.org/projects/terrasky-twilio-manual/)
 # MkDocs
 Project documentation with Markdown.<br>
 View [the MkDocs documentation](https://www.mkdocs.org/).<br>
@@ -19,4 +22,7 @@ mkdocs build
 mkdocs serve
 デプロイURL反映
 mkdocs gh-deploy
- 
+```
+# Read the Docs
+[公式ドキュメント](https://docs.readthedocs.io/en/stable/)
+
