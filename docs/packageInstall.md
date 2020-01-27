@@ -5,9 +5,8 @@ TerraSky-Twilioのインストール手順を説明します。
 ## 組織へのインストール手順
 
 	
-組織にパッケージをインストールするには、次の パッケージインストールをクリックします。
-
-[パッケージインストール TerraSky-Twilio v1.1](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2w000002rdwy)
+組織にパッケージをインストールします。
+インストールURLは別途ご案内致します。
 
 ### インストール先組織へログイン
 
