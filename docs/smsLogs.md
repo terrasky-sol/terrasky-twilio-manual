@@ -4,11 +4,11 @@ SMS送信履歴の確認方法について説明します。
 
 ## 活動履歴での確認
 
-### SMS送信成功時
+### SMS送信API呼び出し成功時
 
-SMS送信成功時に、以下のような活動履歴が生成されます。
+SMS送信API呼び出し成功時に、以下のような活動履歴が生成されます。
 
-![SMS送信成功時活動履歴](img/smsLogs/smsLogSuccess.png)
+![SMS送信API呼び出し成功時活動履歴](img/smsLogs/smsLogSuccess.png)
 
 |  項目  | API参照名 |  内容  |
 | ---- | ---- | ---- |
@@ -16,15 +16,17 @@ SMS送信成功時に、以下のような活動履歴が生成されます。
 |  期日  |  ActivityDate  |  ジョブ実行日  |
 |  優先度  |  Priority  |  Normal  |
 |  コメント  |  Description  |To: 宛先電話番号 <br> Direction: outbound-api <br> Twilio URL: TwilioダッシュボードSMS送信ログURL <br> Body: 送信メッセージ |
-|  状況  |  Status  |  Normal  |
+|  状況  |  Status  |  完了  |
 |  名前  |  WhoId  |  リードや取引先責任者など、人を表すオブジェクトの関連先を表示  |
 |  関連先  |  WhatId  | 取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクトの関連先を表示 |
+|  Twilio SMS送信ステータス  |  TerraSkyTwilio__Twilio_SMS_SID__c  | StatusCallbackURLを設定している場合に設定される |
+|  Twilio SMS　SID  |  Twilio_SMS_Status__c  | StatusCallbackURLを設定している場合に設定される |
 
-### SMS送信失敗時
+### SMS送信API呼び出し失敗時
 
-SMS送信失敗時に、以下のような活動履歴が生成されます。
+SMS送信API呼び出し失敗時に、以下のような活動履歴が生成されます。
 
-![SMS送信失敗時活動履歴](img/smsLogs/smsLogError.png)
+![SMS送信API呼び出し失敗時活動履歴](img/smsLogs/smsLogError.png)
 
 |  項目  | API参照名 |  内容  |
 | ---- | ---- | ---- |
@@ -32,9 +34,11 @@ SMS送信失敗時に、以下のような活動履歴が生成されます。
 |  期日  |  ActivityDate  |  ジョブ実行日  |
 |  優先度  |  Priority  |  Normal  |
 |  コメント  |  Description  |statusCode= 200番台以外 <br> requestBody= リクエスト内容 <br> responseBody= エラーメッセージを含むレスポンス内容 |
-|  状況  |  Status  |  Normal  |
+|  状況  |  Status  |  完了  |
 |  名前  |  WhoId  |  リードや取引先責任者など、人を表すオブジェクトの関連先を表示  |
 |  関連先  |  WhatId  | 取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクトの関連先を表示 |
+|  Twilio SMS送信ステータス  |  TerraSkyTwilio__Twilio_SMS_SID__c  | なし |
+|  Twilio SMS　SID  |  Twilio_SMS_Status__c  | なし |
 
 ## Apexジョブでの確認
 

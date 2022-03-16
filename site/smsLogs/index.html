@@ -71,9 +71,9 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#_1">活動履歴での確認</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#sms_1">SMS送信成功時</a>
+    <li class="toctree-l3"><a class="reference internal" href="#smsapi">SMS送信API呼び出し成功時</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#sms_2">SMS送信失敗時</a>
+    <li class="toctree-l3"><a class="reference internal" href="#smsapi_1">SMS送信API呼び出し失敗時</a>
     </li>
         </ul>
     </li>
@@ -120,9 +120,9 @@
                 <h1 id="sms">SMS送信履歴</h1>
 <p>SMS送信履歴の確認方法について説明します。</p>
 <h2 id="_1">活動履歴での確認</h2>
-<h3 id="sms_1">SMS送信成功時</h3>
-<p>SMS送信成功時に、以下のような活動履歴が生成されます。</p>
-<p><img alt="SMS送信成功時活動履歴" src="../img/smsLogs/smsLogSuccess.png" /></p>
+<h3 id="smsapi">SMS送信API呼び出し成功時</h3>
+<p>SMS送信API呼び出し成功時に、以下のような活動履歴が生成されます。</p>
+<p><img alt="SMS送信API呼び出し成功時活動履歴" src="../img/smsLogs/smsLogSuccess.png" /></p>
 <table>
 <thead>
 <tr>
@@ -155,7 +155,7 @@
 <tr>
 <td>状況</td>
 <td>Status</td>
-<td>Normal</td>
+<td>完了</td>
 </tr>
 <tr>
 <td>名前</td>
@@ -167,11 +167,21 @@
 <td>WhatId</td>
 <td>取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクトの関連先を表示</td>
 </tr>
+<tr>
+<td>Twilio SMS送信ステータス</td>
+<td>TerraSkyTwilio__Twilio_SMS_SID__c</td>
+<td>StatusCallbackURLを設定している場合に設定される</td>
+</tr>
+<tr>
+<td>Twilio SMS　SID</td>
+<td>Twilio_SMS_Status__c</td>
+<td>StatusCallbackURLを設定している場合に設定される</td>
+</tr>
 </tbody>
 </table>
-<h3 id="sms_2">SMS送信失敗時</h3>
-<p>SMS送信失敗時に、以下のような活動履歴が生成されます。</p>
-<p><img alt="SMS送信失敗時活動履歴" src="../img/smsLogs/smsLogError.png" /></p>
+<h3 id="smsapi_1">SMS送信API呼び出し失敗時</h3>
+<p>SMS送信API呼び出し失敗時に、以下のような活動履歴が生成されます。</p>
+<p><img alt="SMS送信API呼び出し失敗時活動履歴" src="../img/smsLogs/smsLogError.png" /></p>
 <table>
 <thead>
 <tr>
@@ -204,7 +214,7 @@
 <tr>
 <td>状況</td>
 <td>Status</td>
-<td>Normal</td>
+<td>完了</td>
 </tr>
 <tr>
 <td>名前</td>
@@ -215,6 +225,16 @@
 <td>関連先</td>
 <td>WhatId</td>
 <td>取引先、商談、キャンペーン、ケース、カスタムオブジェクトなど、人以外のオブジェクトの関連先を表示</td>
+</tr>
+<tr>
+<td>Twilio SMS送信ステータス</td>
+<td>TerraSkyTwilio__Twilio_SMS_SID__c</td>
+<td>なし</td>
+</tr>
+<tr>
+<td>Twilio SMS　SID</td>
+<td>Twilio_SMS_Status__c</td>
+<td>なし</td>
 </tr>
 </tbody>
 </table>
