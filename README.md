@@ -19,6 +19,9 @@ View [the MkDocs documentation](https://www.mkdocs.org/).<br>
 git clone https://github.com/terrasky-sol/terrasky-twilio-manual.git
 cd terrasky-twilio-manual
 
+#mkdocsインストール（pipコマンドの使用にはPythonのインストールが必要）
+pip install mkdocs
+
 #ビルド
 mkdocs build
 #ローカルで確認
@@ -29,10 +32,14 @@ git add .
 git commit -m "コメント"
 git push -u origin master
 
-#バージョンのタグを付けてpushするとそのバージョンのドキュメントが作成される
+#新バージョンのマニュアルをmasterにpushしたらバージョンのタグを付けてpushするとそのバージョンのドキュメントが作成されます
 git tag v1.4.0
 git push origin v1.4.0
-  
+
+#タグを消したいとき
+git tag -d <タグ名>              # <タグ名>をローカルで削除
+git push -d origin <タグ名>          # <タグ名>をリモートで削除
+
 ```
 # Read the Docs
 [公式ドキュメント](https://docs.readthedocs.io/en/stable/)
