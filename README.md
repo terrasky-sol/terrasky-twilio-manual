@@ -13,15 +13,26 @@ View [the MkDocs documentation](https://www.mkdocs.org/).<br>
 [MkDocsによるドキュメント作成](https://qiita.com/mebiusbox2/items/a61d42878266af969e3c)<br>
 [MkDocs 使ってみた。](https://www.kimoton.com/entry/2017/07/08/121050)<br>
 [MkDocs：インストールから github pages へのデプロイまで](https://www.kakistamp.com/entry/2019/08/31/154536)
-# コマンド
-  ```
-  ひな形を作成
-  mkdocs new sample01
-cd sample01
+# マニュアル更新方法
+```
+#ローカルに落とす
+git clone https://github.com/terrasky-sol/terrasky-twilio-manual.git
+cd terrasky-twilio-manual
+
+#ビルド
 mkdocs build
+#ローカルで確認
 mkdocs serve
-デプロイURL反映
-mkdocs gh-deploy
+
+#latestに反映する
+git add .
+git commit -m "コメント"
+git push -u origin master
+
+#バージョンのタグを付けてpushするとそのバージョンのドキュメントが作成される
+git tag v1.4.0
+git push origin v1.4.0
+  
 ```
 # Read the Docs
 [公式ドキュメント](https://docs.readthedocs.io/en/stable/)
