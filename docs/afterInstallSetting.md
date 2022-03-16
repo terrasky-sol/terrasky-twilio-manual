@@ -25,6 +25,7 @@ TerraSky-Twilioのインストール後設定手順を説明します。
 |  IsTest  |  必須  |  チェックなしの場合、実際にSMSが送信されSalesforceとTwilioにログが残ります。<br>チェックありの場合、Twilioのテスト用クレデンシャルを使用し、実際にSMS送信はされずにSalesforceに活動履歴としてログだけが残ります。その際、Twilioにログは残りません。  |
 |  MessagingServiceSID  |  必須  |  Twilioで作成したSMSのMessagingServiceSIDを入力します。例：MG***************************  |
 |  TwilioDashboardUri  |  必須  | 活動履歴のログで使用するため、次のURLを入力します。 https://www.twilio.com |
+|  StatusCallbackURL  |  任意  | SMS送信ステータスをコールバックして書き込むためのTwilio Functionを作成しそのURLを入力します |
 
 !!! Tips
     カスタム設定は用途に合わせて複数作成可能です。MessagingServiceを複数作成し、用途によって送信元を変更する事が出来ます。
